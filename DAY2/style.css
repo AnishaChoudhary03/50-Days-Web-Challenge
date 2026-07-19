@@ -1,0 +1,90 @@
+/* Day 2 - moved all my CSS here from index.html */
+
+/* reset - removes default margin/padding browsers add on their own */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* my color variables so I don't have to type hex codes everywhere */
+:root {
+  --primary-color: #BD8A3F;
+  --text-color: #ffffff;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  background-color: #123A5C;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* header + nav */
+header {
+  background-color: #0C2A44;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+/* general spacing for all sections */
+section {
+  padding: 30px;
+}
+
+/* bonus challenge - hero heading */
+#hero h1 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.cta-button {
+  background-color: var(--primary-color);
+  color: black;
+  padding: 10px;
+  display: inline-block;
+}
+
+#about {
+  background-color: #F1EDE2;
+  color: black;
+}
+
+.initiative-box {
+  background-color: #F1EDE2;
+  color: black;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 2px solid var(--primary-color);
+}
+
+.team-box {
+  background-color: #F1EDE2;
+  color: black;
+  padding: 15px;
+  margin-bottom: 15px;
+  width: 200px;
+}
+
+footer {
+  background-color: #0C2A44;
+  text-align: center;
+  padding: 20px;
+}
