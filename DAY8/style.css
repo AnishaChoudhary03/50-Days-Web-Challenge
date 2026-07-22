@@ -1,0 +1,84 @@
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+.hero,
+.profiles,
+.contact{
+    width:90%;
+    max-width:1200px;
+    margin:70px auto;
+}
+
+.hero-box,
+.contact-box{
+    background:#1e293b;
+    border-radius:18px;
+    padding:50px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.cards-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.profile-card{
+    background:#1e293b;
+    padding:35px;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.1);
+    text-align:center;
+}
+
+.member-logo{
+    width:80px;
+    height:80px;
+    margin:auto;
+    margin-bottom:20px;
+    border-radius:50%;
+    background:#2563eb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    color:white;
+}
+
+.input-box{
+    margin-bottom:20px;
+    text-align:left;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:14px;
+    border-radius:10px;
+    border:1px solid #334155;
+    background:#0f172a;
+    color:white;
+    box-sizing:border-box;
+}
+
+button{
+    padding:14px 35px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
