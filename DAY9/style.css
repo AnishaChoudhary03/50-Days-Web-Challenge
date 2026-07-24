@@ -1,0 +1,215 @@
+/* ===================================
+   TEAM / MEMBERS SECTION
+=================================== */
+
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+.profile-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:0.3s ease;
+}
+
+.profile-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--primary);
+}
+
+.profile-card img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid var(--primary);
+    margin-bottom:20px;
+}
+
+.profile-card h3{
+    color:var(--text);
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.profile-card p{
+    color:var(--text-light);
+    font-size:16px;
+    margin-bottom:25px;
+    line-height:1.6;
+}
+
+.profile-card button{
+    background:var(--primary);
+    color:white;
+    border:none;
+    padding:12px 28px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.profile-card button:hover{
+    background:var(--primary-dark);
+}
+
+/* ===================================
+   CONTACT SECTION
+=================================== */
+
+.contact{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:50px;
+    box-shadow:var(--shadow);
+}
+
+.contact form{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.contact label{
+    color:var(--text);
+    font-weight:600;
+    margin-bottom:6px;
+}
+
+.contact input,
+.contact textarea{
+
+    width:100%;
+    padding:14px 18px;
+
+    background:#0f172a;
+
+    color:white;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.contact textarea{
+    resize:vertical;
+    min-height:180px;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder{
+    color:#94a3b8;
+}
+
+/* ===================================
+   ACCESSIBLE FOCUS
+=================================== */
+
+.contact input:focus,
+.contact textarea:focus{
+
+    outline:none;
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(37,99,235,.25);
+
+}
+
+/* ===================================
+   BUTTON
+=================================== */
+
+.contact button{
+
+    width:220px;
+
+    margin:auto;
+
+    background:var(--primary);
+
+    color:white;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.contact button:hover{
+
+    background:var(--primary-dark);
+
+}
+
+.contact button:disabled{
+
+    background:#64748b;
+
+    cursor:not-allowed;
+
+}
+
+/* ===================================
+   DAY 9 ACCESSIBILITY
+=================================== */
+
+/* Keyboard Navigation */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible{
+
+    outline:4px solid #facc15;
+
+    outline-offset:4px;
+
+}
+
+/* HTML5 Validation */
+
+input:valid,
+textarea:valid{
+
+    border-color:#22c55e;
+
+}
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown){
+
+    border-color:#ef4444;
+
+}
+
+/* Images */
+
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
