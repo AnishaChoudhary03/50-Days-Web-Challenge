@@ -1,0 +1,295 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#08142d;
+    color:#ffffff;
+    line-height:1.7;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+/* ==========================================
+   VARIABLES
+========================================== */
+
+:root{
+
+--primary:#3b82f6;
+--secondary:#60a5fa;
+--background:#08142d;
+--card:rgba(255,255,255,.08);
+--border:rgba(255,255,255,.15);
+--text:#ffffff;
+--text-light:#d1d5db;
+--shadow:0 10px 30px rgba(0,0,0,.30);
+--radius:18px;
+
+}
+
+/* ==========================================
+   SKIP LINK
+========================================== */
+
+.skip-link{
+
+position:absolute;
+left:-9999px;
+top:20px;
+background:#fff;
+color:#000;
+padding:10px 16px;
+border-radius:8px;
+z-index:9999;
+
+}
+
+.skip-link:focus{
+
+left:20px;
+
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+header{
+
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(8,20,45,.95);
+backdrop-filter:blur(15px);
+
+}
+
+.navbar{
+
+max-width:1200px;
+margin:auto;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+.logo img{
+
+width:55px;
+height:55px;
+border-radius:50%;
+
+}
+
+.logo h2{
+
+color:var(--primary);
+
+}
+
+.nav-links{
+
+display:flex;
+gap:30px;
+
+}
+
+.nav-links a{
+
+color:white;
+font-weight:500;
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:var(--secondary);
+
+}
+
+/* ==========================================
+   HAMBURGER MENU
+========================================== */
+
+.menu-toggle{
+
+display:none;
+background:none;
+border:none;
+cursor:pointer;
+
+}
+
+.menu-toggle span{
+
+display:block;
+width:28px;
+height:3px;
+margin:6px;
+background:white;
+transition:.3s;
+
+}
+
+.menu-toggle.active span:nth-child(1){
+
+transform:rotate(45deg) translate(6px,6px);
+
+}
+
+.menu-toggle.active span:nth-child(2){
+
+opacity:0;
+
+}
+
+.menu-toggle.active span:nth-child(3){
+
+transform:rotate(-45deg) translate(7px,-7px);
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+max-width:1200px;
+margin:auto;
+min-height:90vh;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:60px;
+padding:80px 20px;
+
+}
+
+.hero-content h1{
+
+font-size:3.5rem;
+margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+color:var(--text-light);
+margin-bottom:30px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+gap:20px;
+
+}
+
+.btn{
+
+padding:14px 30px;
+border-radius:40px;
+font-weight:600;
+transition:.3s;
+
+}
+
+.primary-btn{
+
+background:var(--primary);
+color:white;
+
+}
+
+.primary-btn:hover{
+
+background:#2563eb;
+transform:translateY(-5px);
+
+}
+
+.secondary-btn{
+
+border:2px solid var(--primary);
+color:white;
+
+}
+
+.secondary-btn:hover{
+
+background:var(--primary);
+
+}
+
+.hero-image img{
+
+border-radius:20px;
+box-shadow:var(--shadow);
+
+}
+
+/* ==========================================
+   COMMON SECTION
+========================================== */
+
+section{
+
+padding:100px 20px;
+
+}
+
+.section-title{
+
+text-align:center;
+margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+font-size:2.5rem;
+margin-bottom:15px;
+
+}
+
+.section-title p{
+
+color:var(--text-light);
+
+}
