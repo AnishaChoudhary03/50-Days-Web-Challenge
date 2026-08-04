@@ -1,0 +1,1348 @@
+/* ==========================================
+   SYNEXUS CORE
+   DAY 20
+========================================== */
+
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--bg-color);
+
+    color:var(--text-color);
+
+    line-height:1.7;
+
+    transition:.4s;
+
+}
+
+/* ==========================================
+   VARIABLES
+========================================== */
+
+:root{
+
+    --primary:#2563eb;
+
+    --secondary:#1d4ed8;
+
+    --accent:#38bdf8;
+
+    --bg-color:#f8fafc;
+
+    --card-color:#ffffff;
+
+    --text-color:#1f2937;
+
+    --text-light:#64748b;
+
+    --border:#e2e8f0;
+
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+   DARK THEME
+========================================== */
+
+body.dark-theme{
+
+    --bg-color:#0f172a;
+
+    --card-color:#1e293b;
+
+    --text-color:#f8fafc;
+
+    --text-light:#cbd5e1;
+
+    --border:#334155;
+
+    --shadow:0 12px 30px rgba(0,0,0,.4);
+
+}
+
+/* ==========================================
+   COMMON STYLES
+========================================== */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+.section{
+
+    padding:100px 0;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+    font-size:2.8rem;
+
+    margin-bottom:15px;
+
+    color:var(--text-color);
+
+}
+
+.section-title p{
+
+    color:var(--text-light);
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.btn{
+
+    display:inline-block;
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.primary-btn{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.primary-btn:hover{
+
+    background:var(--secondary);
+
+    transform:translateY(-4px);
+
+}
+
+.secondary-btn{
+
+    background:transparent;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+}
+
+.secondary-btn:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    background:var(--card-color);
+
+    box-shadow:var(--shadow);
+
+    z-index:1000;
+
+}
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:80px;
+
+}
+
+.logo{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+.logo a{
+
+    text-decoration:none;
+
+    color:var(--text-color);
+
+}
+
+.logo span{
+
+    color:var(--primary);
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:30px;
+
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:var(--text-color);
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover,
+
+.nav-links a.active{
+
+    color:var(--primary);
+
+}
+
+/* ==========================================
+   THEME BUTTON
+========================================== */
+
+#theme-toggle{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+#theme-toggle:hover{
+
+    transform:rotate(20deg);
+
+}
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+.menu-toggle span{
+
+    width:28px;
+
+    height:3px;
+
+    background:var(--text-color);
+
+    border-radius:20px;
+
+}
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    color:#fff;
+
+}
+
+.hero-content{
+
+    max-width:850px;
+
+}
+
+.hero h1{
+
+    font-size:4rem;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1 span{
+
+    color:#facc15;
+
+}
+
+.hero p{
+
+    font-size:1.1rem;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ==========================================
+   ABOUT SECTION
+========================================== */
+
+.about{
+
+    background:var(--bg-color);
+
+}
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.about-card{
+
+    background:var(--card-color);
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.about-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.about-card i{
+
+    font-size:3rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.about-card h3{
+
+    margin-bottom:15px;
+
+}
+
+.about-card p{
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================
+   INITIATIVES
+========================================== */
+
+.initiatives{
+
+    background:var(--bg-color);
+
+}
+
+.search-container{
+
+    max-width:550px;
+
+    margin:0 auto 40px;
+
+}
+
+#search-projects{
+
+    width:100%;
+
+    padding:15px 20px;
+
+    border-radius:50px;
+
+    border:2px solid var(--border);
+
+    background:var(--card-color);
+
+    color:var(--text-color);
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+#search-projects:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 15px rgba(37,99,235,.25);
+
+}
+
+.initiatives-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+.initiative-card{
+
+    background:var(--card-color);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.initiative-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.initiative-card h3{
+
+    margin-bottom:15px;
+
+}
+
+.initiative-card p{
+
+    color:var(--text-light);
+
+    margin-bottom:20px;
+
+}
+
+.view-btn{
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.view-btn:hover{
+
+    background:var(--secondary);
+
+}
+
+/* ==========================================
+   TASK TRACKER
+========================================== */
+
+.task-tracker{
+
+    background:var(--bg-color);
+
+}
+
+.task-container{
+
+    max-width:850px;
+
+    margin:auto;
+
+    background:var(--card-color);
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.task-input-area{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+}
+
+#task-input{
+
+    flex:1;
+
+    padding:15px;
+
+    border:2px solid var(--border);
+
+    border-radius:12px;
+
+    background:var(--bg-color);
+
+    color:var(--text-color);
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+#task-input:focus{
+
+    border-color:var(--primary);
+
+}
+
+#add-task-btn{
+
+    white-space:nowrap;
+
+}
+
+/* ==========================================
+   TASK LIST
+========================================== */
+
+.task-list{
+
+    list-style:none;
+
+}
+
+.task-list li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 20px;
+
+    margin-bottom:15px;
+
+    border-radius:15px;
+
+    background:var(--bg-color);
+
+    border:1px solid var(--border);
+
+    transition:.3s;
+
+}
+
+.task-list li:hover{
+
+    transform:translateX(5px);
+
+}
+
+.task-content{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.task-content input[type="checkbox"]{
+
+    width:20px;
+
+    height:20px;
+
+    cursor:pointer;
+
+}
+
+.task-text{
+
+    font-size:1rem;
+
+    color:var(--text-color);
+
+}
+
+.completed .task-text{
+
+    text-decoration:line-through;
+
+    color:var(--text-light);
+
+    opacity:.7;
+
+}
+
+/* ==========================================
+   DELETE BUTTON
+========================================== */
+
+.delete-btn{
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ef4444;
+
+    color:#fff;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.delete-btn:hover{
+
+    transform:rotate(90deg);
+
+    background:#dc2626;
+
+}
+/* ==========================================
+   TEAM SECTION
+========================================== */
+
+.team{
+
+    background:var(--bg-color);
+
+}
+
+.team-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.team-card{
+
+    background:var(--card-color);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.team-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.team-card img{
+
+    width:150px;
+
+    height:150px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border: 4px solid #2563eb;
+}
+/* ==========================================
+   PROJECT DETAILS MODAL
+========================================== */
+
+.modal-overlay{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(15,23,42,.75);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    z-index:5000;
+
+}
+
+.modal-box{
+
+    width:100%;
+
+    max-width:600px;
+
+    background:var(--card-color);
+
+    padding:35px;
+
+    border-radius:20px;
+
+    position:relative;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+    animation:modalPopup .35s ease;
+
+}
+
+.close-btn{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ef4444;
+
+    color:#fff;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.close-btn:hover{
+
+    transform:rotate(90deg);
+
+}
+
+#modal-title{
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+#modal-description{
+
+    color:var(--text-light);
+
+    margin-bottom:20px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer{
+
+    background:var(--card-color);
+
+    padding:70px 0 20px;
+
+    border-top:1px solid var(--border);
+
+}
+
+.footer-content{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:40px;
+
+}
+
+.footer-logo{
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+}
+
+.footer-logo span{
+
+    color:var(--primary);
+
+}
+
+.footer-section h3{
+
+    margin-bottom:20px;
+
+}
+
+.footer-section p{
+
+    color:var(--text-light);
+
+    margin-bottom:10px;
+
+}
+
+.footer-section ul{
+
+    list-style:none;
+
+}
+
+.footer-section li{
+
+    margin-bottom:10px;
+
+}
+
+.footer-section a{
+
+    text-decoration:none;
+
+    color:var(--text-light);
+
+    transition:.3s;
+
+}
+
+.footer-section a:hover{
+
+    color:var(--primary);
+
+    padding-left:5px;
+
+}
+
+.social-icons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.social-icons a{
+
+    width:45px;
+
+    height:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transition:.3s;
+
+}
+
+.social-icons a:hover{
+
+    background:var(--secondary);
+
+    transform:translateY(-5px);
+
+}
+
+.footer hr{
+
+    margin:40px 0 20px;
+
+    border:none;
+
+    border-top:1px solid var(--border);
+
+}
+
+.footer-bottom{
+
+    text-align:center;
+
+}
+
+.footer-bottom p{
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes modalPopup{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+.about-card,
+.initiative-card,
+.team-card,
+.contact-card,
+.join-card,
+.testimonial-card,
+.task-container{
+
+    animation:fadeUp .8s ease;
+
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media(max-width:992px){
+
+.hero h1{
+
+font-size:3rem;
+
+}
+
+.contact-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.menu-toggle{
+
+display:flex;
+
+}
+
+.nav-links{
+
+position:absolute;
+
+top:80px;
+
+left:0;
+
+width:100%;
+
+display:none;
+
+flex-direction:column;
+
+background:var(--card-color);
+
+padding:30px;
+
+box-shadow:var(--shadow);
+
+}
+
+.nav-links.active{
+
+display:flex;
+
+}
+
+.hero{
+
+padding:120px 0 80px;
+
+}
+
+.hero h1{
+
+font-size:2.5rem;
+
+}
+
+.hero-buttons,
+
+.testimonial-buttons,
+
+.task-input-area{
+
+flex-direction:column;
+
+}
+
+.footer-content{
+
+text-align:center;
+
+}
+
+.social-icons{
+
+justify-content:center;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.section{
+
+padding:70px 0;
+
+}
+
+.section-title h2{
+
+font-size:2rem;
+
+}
+
+.hero h1{
+
+font-size:2rem;
+
+}
+
+.about-grid,
+
+.team-grid,
+
+.initiatives-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.btn{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.modal-box{
+
+padding:25px;
+
+}
+
+.task-list li{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:15px;
+
+}
+
+.delete-btn{
+
+align-self:flex-end;
+
+}
+
+}
+
+/* ==========================================
+   CUSTOM SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:var(--bg-color);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:var(--secondary);
+
+}
+
+/* ==========================================
+   SMOOTH TRANSITIONS
+========================================== */
+
+body,
+.header,
+.footer,
+.about-card,
+.initiative-card,
+.team-card,
+.contact-card,
+.join-card,
+.testimonial-card,
+.task-container,
+.modal-box,
+button,
+input,
+textarea,
+select{
+
+transition:
+
+background-color .35s ease,
+
+color .35s ease,
+
+border-color .35s ease,
+
+box-shadow .35s ease,
+
+transform .35s ease;
+
+}
