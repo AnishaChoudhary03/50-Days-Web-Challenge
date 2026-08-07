@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Synexus Core | Day 22</title>
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <nav class="navbar">
+
+                <div class="logo">
+
+                    <a href="#">
+
+                        Synexus
+                        <span>Core</span>
+
+                    </a>
+
+                </div>
+
+                <ul class="nav-links">
+
+                    <li><a href="#home">Home</a></li>
+
+                    <li><a href="#about">About</a></li>
+
+                    <li><a href="#initiatives">Initiatives</a></li>
+
+                    <li><a href="#kanban">Kanban</a></li>
+
+                    <li><a href="#team">Team</a></li>
+
+                    <li><a href="#testimonials">Testimonials</a></li>
+
+                    <li><a href="#contact">Contact</a></li>
+
+                    <li><a href="#join">Join</a></li>
+
+                </ul>
+
+                <button id="theme-toggle">
+
+                    🌙
+
+                </button>
+
+                <button class="menu-toggle">
+
+                    <span></span>
+
+                    <span></span>
+
+                    <span></span>
+
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section
+        id="home"
+        class="hero">
+
+        <div class="container hero-content">
+
+            <h1>
+
+                Welcome to
+
+                <span>Synexus Core</span>
+
+            </h1>
+
+            <p>
+
+                Empowering students through projects,
+                innovation, teamwork and modern web
+                technologies.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#about"
+                    class="btn primary-btn">
+
+                    Explore
+
+                </a>
+
+                <a href="#join"
+                    class="btn secondary-btn">
+
+                    Join Community
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section
+        id="about"
+        class="section about">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+
+                    About Synexus Core
+
+                </h2>
+
+                <p>
+
+                    Synexus Core is a student-driven
+                    engineering community where
+                    members collaborate on real-world
+                    projects, workshops, hackathons,
+                    and technical events.
+
+                </p>
+
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-card">
+
+                    <i class="fas fa-users"></i>
+
+                    <h3>
+
+                        Community
+
+                    </h3>
+
+                    <p>
+
+                        Learn together with passionate
+                        developers and innovators.
+
+                    </p>
+
+                </div>
+
+                <div class="about-card">
+
+                    <i class="fas fa-code"></i>
+
+                    <h3>
+
+                        Development
+
+                    </h3>
+
+                    <p>
+
+                        Build real-world websites,
+                        applications and engineering
+                        solutions.
+
+                    </p>
+
+                </div>
+
+                <div class="about-card">
+
+                    <i class="fas fa-lightbulb"></i>
+
+                    <h3>
+
+                        Innovation
+
+                    </h3>
+
+                    <p>
+
+                        Participate in competitions,
+                        hackathons and technical events.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- ================= INITIATIVES ================= -->
+
+    <section
+        id="initiatives"
+        class="section initiatives">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+
+                    Community Initiatives
+
+                </h2>
+
+                <p>
+
+                    Explore our ongoing engineering
+                    projects and innovations.
+
+                </p>
+
+            </div>
+
+            <!-- Search -->
+
+            <div class="search-container">
+
+                <input
+
+                    type="text"
+
+                    id="search-projects"
+
+                    placeholder="Search projects...">
+
+            </div>
+
+            <!-- Dynamic Cards -->
+
+            <div
+
+                id="dynamic-grid"
+
+                class="initiatives-grid">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= DAY 22 KANBAN ================= -->
+
+    <section
+        id="kanban"
+        class="section kanban">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+
+                    Task Management Board
+
+                </h2>
+
+                <p>
+
+                    Drag and drop your tasks between
+                    different stages.
+
+                </p>
+
+            </div>
+
+            <div class="kanban-board">
+
+                <!-- TO DO -->
+
+                <div class="column">
+
+                    <h3>
+
+                        📋 To Do
+
+                    </h3>
+
+                    <div class="task-card"
+
+                        draggable="true">
+
+                        Build Homepage
+
+                    </div>
+
+                    <div class="task-card"
+
+                        draggable="true">
+
+                        Complete CSS Styling
+
+                    </div>
+
+                    <div class="task-card"
+
+                        draggable="true">
+
+                        Learn JavaScript
+
+                    </div>
+
+                </div>
+
+                <!-- IN PROGRESS -->
+
+                <div class="column">
+
+                    <h3>
+
+                        🚀 In Progress
+
+                    </h3>
+
+                    <div class="task-card"
+
+                        draggable="true">
+
+                        Dynamic Search
+
+                    </div>
+
+                </div>
+
+                <!-- DONE -->
+
+                <div class="column">
+
+                    <h3>
+
+                        ✅ Done
+
+                    </h3>
+
+                    <div class="task-card"
+
+                        draggable="true">
+
+                        Hero Section
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- ================= TEAM ================= -->
+
+    <section
+        id="team"
+        class="section team">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+
+                    Meet Our Team
+
+                </h2>
+
+                <p>
+
+                    Passionate members working together
+                    to build innovative engineering
+                    projects.
+
+                </p>
+
+            </div>
+
+            <div class="team-grid">
+
+                <div class="team-card">
+
+                    <img
+                        src="images/member1.jpg"
+                        alt="Member">
+
+                    <h3>
+
+                        Anisha Choudhary
+
+                    </h3>
+
+                    <p class="role">
+
+                        Community Lead
+
+                    </p>
+
+                </div>
+
+                <div class="team-card">
+
+                    <img
+                        src="images/member2.jpg"
+                        alt="Member">
+
+                    <h3>
+
+                        Avani Kulkarni
+
+                    </h3>
+
+                    <p class="role">
+
+                        Project Coordinator
+
+                    </p>
+
+                </div>
+
+                <div class="team-card">
+
+                    <img
+                        src="images/member3.jpg"
+                        alt="Member">
+
+                    <h3>
+
+                        Mohammed Rayyan
+
+                    </h3>
+
+                    <p class="role">
+
+                        Technical Lead
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+
+    <section
+        id="testimonials"
+        class="section testimonials">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+
+                    Testimonials
+
+                </h2>
+
+            </div>
+
+            <div class="testimonial-card">
+
+                <h3
+                    id="testimonial-name">
+
+                </h3>
+
+                <p
+                    id="testimonial-quote">
+
+                </p>
+
+                <div class="testimonial-buttons">
+
+                    <button
+                        id="prev-testimonial"
+                        class="btn secondary-btn">
+
+                        Previous
+
+                    </button>
+
+                    <button
+                        id="next-testimonial"
+                        class="btn primary-btn">
+
+                        Next
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+
+    <section
+        id="contact"
+        class="section contact">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+
+                    Contact Us
+
+                </h2>
+
+            </div>
+
+            <div class="contact-container">
+
+                <div class="contact-info">
+
+                    <div class="contact-card">
+
+                        <i class="fas fa-envelope"></i>
+
+                        <div>
+
+                            <h3>Email</h3>
+
+                            <p>
+
+                                synexuscore@gmail.com
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-card">
+
+                        <i class="fas fa-phone"></i>
+
+                        <div>
+
+                            <h3>Phone</h3>
+
+                            <p>
+
+                                +91 98765 43210
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <form
+                    id="contactForm"
+                    class="contact-form">
+
+                    <div class="form-group">
+
+                        <input
+                            type="text"
+                            id="contactName"
+                            placeholder="Your Name">
+
+                        <small
+                            id="contactNameError"
+                            class="error">
+
+                        </small>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <input
+                            type="email"
+                            id="contactEmail"
+                            placeholder="Your Email">
+
+                        <small
+                            id="contactEmailError"
+                            class="error">
+
+                        </small>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <textarea
+                            id="contactMessage"
+                            placeholder="Your Message">
+
+                        </textarea>
+
+                        <small
+                            id="contactMessageError"
+                            class="error">
+
+                        </small>
+
+                    </div>
+
+                    <button
+                        class="btn primary-btn"
+                        type="submit">
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- ================= TEAM ================= -->
+
+    <section
+        id="team"
+        class="section team">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+
+                    Meet Our Team
+
+                </h2>
+
+                <p>
+
+                    Our dedicated Synexus Core members
+                    work together to build innovative
+                    engineering solutions.
+
+                </p>
+
+            </div>
+
+            <div class="team-grid">
+
+                <div class="team-card">
+
+                    <img
+                        src="images/member1.jpg"
+                        alt="Team Member">
+
+                    <h3>
+
+                        Anisha Choudhary
+
+                    </h3>
+
+                    <p class="role">
+
+                        Community Lead
+
+                    </p>
+
+                    <p>
+
+                        Passionate about leadership,
+                        web technologies and innovation.
+
+                    </p>
+
+                </div>
+
+                <div class="team-card">
+
+                    <img
+                        src="images/member2.jpg"
+                        alt="Team Member">
+
+                    <h3>
+
+                        Avani Kulkarni
+
+                    </h3>
+
+                    <p class="role">
+
+                        Project Coordinator
+
+                    </p>
+
+                    <p>
+
+                        Coordinates projects,
+                        workshops and events.
+
+                    </p>
+
+                </div>
+
+                <div class="team-card">
+
+                    <img
+                        src="images/member3.jpg"
+                        alt="Team Member">
+
+                    <h3>
+
+                        Mohammed Rayyan
+
+                    </h3>
+
+                    <p class="role">
+
+                        Technical Lead
+
+                    </p>
+
+                    <p>
+
+                        Full Stack Developer
+                        and problem solver.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+
+    <section
+        id="testimonials"
+        class="section testimonials">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+
+                    Testimonials
+
+                </h2>
+
+                <p>
+
+                    Hear from our community members.
+
+                </p>
+
+            </div>
+
+            <div class="testimonial-card">
+
+                <h3
+                    id="testimonial-name">
+
+                </h3>
+
+                <p
+                    id="testimonial-quote">
+
+                </p>
+
+                <div
+                    class="testimonial-buttons">
+
+                    <button
+                        id="prev-testimonial"
+                        class="btn secondary-btn">
+
+                        Previous
+
+                    </button>
+
+                    <button
+                        id="next-testimonial"
+                        class="btn primary-btn">
+
+                        Next
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+
+    <section
+        id="contact"
+        class="section contact">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+
+                    Contact Us
+
+                </h2>
+
+                <p>
+
+                    We'd love to hear from you.
+
+                </p>
+
+            </div>
+
+            <div class="contact-container">
+
+                <div class="contact-info">
+
+                    <div class="contact-card">
+
+                        <i class="fas fa-map-marker-alt"></i>
+
+                        <div>
+
+                            <h3>
+
+                                Address
+
+                            </h3>
+
+                            <p>
+
+                                T John Institute of Technology,
+                                Bengaluru
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-card">
+
+                        <i class="fas fa-envelope"></i>
+
+                        <div>
+
+                            <h3>
+
+                                Email
+
+                            </h3>
+
+                            <p>
+
+                                synexuscore@gmail.com
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-card">
+
+                        <i class="fas fa-phone"></i>
+
+                        <div>
+
+                            <h3>
+
+                                Phone
+
+                            </h3>
+
+                            <p>
+
+                                +91 98765 43210
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <form
+                    id="contactForm"
+                    class="contact-form">
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Name
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contactName">
+
+                        <small
+                            id="contactNameError"
+                            class="error">
+
+                        </small>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Email
+
+                        </label>
+
+                        <input
+                            type="email"
+                            id="contactEmail">
+
+                        <small
+                            id="contactEmailError"
+                            class="error">
+
+                        </small>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Subject
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contactSubject">
+
+                        <small
+                            id="contactSubjectError"
+                            class="error">
+
+                        </small>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Message
+
+                        </label>
+
+                        <textarea
+                            id="contactMessage"
+                            rows="5"></textarea>
+
+                        <small
+                            id="contactMessageError"
+                            class="error">
+
+                        </small>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="btn primary-btn">
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- ================= JOIN COMMUNITY ================= -->
+
+    <section
+        id="join"
+        class="section join">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+
+                    Join Synexus Core
+
+                </h2>
+
+                <p>
+
+                    Become a part of our engineering
+                    community and build amazing
+                    projects with us.
+
+                </p>
+
+            </div>
+
+            <div class="join-card">
+
+                <form id="membershipForm">
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Full Name
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Enter your name">
+
+                        <small
+                            id="nameError"
+                            class="error">
+
+                        </small>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Email
+
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email">
+
+                        <small
+                            id="emailError"
+                            class="error">
+
+                        </small>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Department
+
+                        </label>
+
+                        <select id="department">
+
+                            <option value="">
+
+                                Select Department
+
+                            </option>
+
+                            <option>
+
+                                Computer Science
+
+                            </option>
+
+                            <option>
+
+                                Information Science
+
+                            </option>
+
+                            <option>
+
+                                Electronics
+
+                            </option>
+
+                            <option>
+
+                                Mechanical
+
+                            </option>
+
+                            <option>
+
+                                Civil
+
+                            </option>
+
+                        </select>
+
+                        <small
+                            id="departmentError"
+                            class="error">
+
+                        </small>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Academic Year
+
+                        </label>
+
+                        <select id="year">
+
+                            <option value="">
+
+                                Select Year
+
+                            </option>
+
+                            <option>
+
+                                1st Year
+
+                            </option>
+
+                            <option>
+
+                                2nd Year
+
+                            </option>
+
+                            <option>
+
+                                3rd Year
+
+                            </option>
+
+                            <option>
+
+                                4th Year
+
+                            </option>
+
+                        </select>
+
+                        <small
+                            id="yearError"
+                            class="error">
+
+                        </small>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Why do you want to join?
+
+                        </label>
+
+                        <textarea
+
+                            id="message"
+
+                            rows="5"
+
+                            placeholder="Tell us about yourself...">
+
+                        </textarea>
+
+                    </div>
+
+                    <p id="draftStatus">
+
+                        ✅ Draft Saved
+
+                    </p>
+
+                    <button
+                        type="submit"
+                        class="btn primary-btn">
+
+                        Submit Application
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PROJECT MODAL ================= -->
+
+    <div
+        id="modal-overlay"
+        class="modal-overlay">
+
+        <div class="modal-box">
+
+            <button
+                id="close-modal"
+                class="close-btn">
+
+                &times;
+
+            </button>
+
+            <h2 id="modal-title"></h2>
+
+            <p id="modal-description"></p>
+
+            <span
+                id="modal-status"
+                class="status">
+
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-section">
+
+                    <h2>
+
+                        Synexus
+                        <span>Core</span>
+
+                    </h2>
+
+                    <p>
+
+                        Empowering students through
+                        innovation, teamwork and
+                        technology.
+
+                    </p>
+
+                </div>
+
+                <div class="footer-section">
+
+                    <h3>
+
+                        Quick Links
+
+                    </h3>
+
+                    <ul>
+
+                        <li>
+
+                            <a href="#home">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#about">
+
+                                About
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#initiatives">
+
+                                Initiatives
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#kanban">
+
+                                Kanban
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#contact">
+
+                                Contact
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="footer-section">
+
+                    <h3>
+
+                        Follow Us
+
+                    </h3>
+
+                    <div class="social-icons">
+
+                        <a href="#">
+
+                            <i class="fab fa-facebook-f"></i>
+
+                        </a>
+
+                        <a href="#">
+
+                            <i class="fab fa-instagram"></i>
+
+                        </a>
+
+                        <a href="#">
+
+                            <i class="fab fa-linkedin"></i>
+
+                        </a>
+
+                        <a href="#">
+
+                            <i class="fab fa-github"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    © 2026 Synexus Core.
+                    All Rights Reserved.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
