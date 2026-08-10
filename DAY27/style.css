@@ -1,0 +1,182 @@
+/* ==========================================
+   DAY 25 - REPOSITORY GRID
+========================================== */
+
+#repos-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 40px;
+
+}
+
+
+/* ==========================================
+   REPOSITORY CARD
+========================================== */
+
+.repo-card {
+
+    background: var(--card);
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+    transition: .3s;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 250px;
+
+}
+
+.repo-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .12);
+
+}
+
+.repo-card h3 {
+
+    color: var(--primary);
+
+    margin-bottom: 12px;
+
+    word-break: break-word;
+
+}
+
+.repo-card p {
+
+    color: var(--light);
+
+    margin-bottom: 20px;
+
+    flex: 1;
+
+}
+
+
+/* ==========================================
+   REPOSITORY LINK
+========================================== */
+
+.repo-card .repo-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 10px 18px;
+
+    border-radius: 25px;
+
+    background: var(--primary);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.repo-card .repo-link:hover {
+
+    background: var(--secondary);
+
+}
+
+
+/* ==========================================
+   REPOSITORY EMPTY STATE
+========================================== */
+
+.repo-empty {
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background: var(--card);
+
+    border-radius: 20px;
+
+    color: var(--light);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* ==========================================
+   REPOSITORY ERROR
+========================================== */
+
+.repo-error {
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background: var(--card);
+
+    border: 2px solid #fecaca;
+
+    border-radius: 20px;
+
+    color: var(--error);
+
+}
+
+
+/* ==========================================
+   RESPONSIVE REPOSITORIES
+========================================== */
+
+@media (max-width: 900px) {
+
+    #repos-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #repos-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
