@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Synexus Core | ES6 Modules</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <nav class="navbar">
+
+                <a href="#home" class="logo">
+                    Synexus <span>Core</span>
+                </a>
+
+                <div class="nav-links">
+
+                    <a href="#home">
+                        Home
+                    </a>
+
+                    <a href="#search">
+                        Developer Search
+                    </a>
+
+                    <a href="#proposal">
+                        Proposal
+                    </a>
+
+                    <a href="#manage">
+                        Manage
+                    </a>
+
+                </div>
+
+                <button
+                    id="theme-toggle"
+                    type="button">
+                    🌙
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ==============================
+             HERO
+        =============================== -->
+
+        <section
+            id="home"
+            class="hero">
+
+            <div class="container hero-content">
+
+                <div class="hero-icon">
+                    <i class="fas fa-cubes"></i>
+                </div>
+
+                <h1>
+                    Modular
+                    <span>JavaScript</span>
+                    Architecture
+                </h1>
+
+                <p>
+                    Building scalable applications
+                    with native ES6 Modules.
+                </p>
+
+                <a
+                    href="#search"
+                    class="btn primary-btn">
+
+                    Explore Application
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             GITHUB SEARCH
+        =============================== -->
+
+        <section
+            id="search"
+            class="section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        Contributor Lookup
+                    </h2>
+
+                    <p>
+                        Search GitHub developers
+                        using our API module.
+                    </p>
+
+                </div>
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="github-username"
+                        placeholder="Enter GitHub username"
+                        autocomplete="off">
+
+                </div>
+
+                <div id="dev-profile-card">
+
+                    <div class="empty-state">
+
+                        <i class="fab fa-github"></i>
+
+                        <h3>
+                            Search for a Developer
+                        </h3>
+
+                        <p>
+                            Start typing a GitHub username.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             PROPOSAL
+        =============================== -->
+
+        <section
+            id="proposal"
+            class="section alternate-section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        Propose an Initiative
+                    </h2>
+
+                    <p>
+                        Create a new technical initiative.
+                    </p>
+
+                </div>
+
+                <form
+                    id="proposal-form"
+                    class="proposal-form">
+
+                    <div class="form-group">
+
+                        <label for="proposal-title">
+                            Initiative Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="proposal-title"
+                            placeholder="Enter initiative title"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="proposal-description">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="proposal-description"
+                            rows="6"
+                            placeholder="Describe your initiative..."
+                            required></textarea>
+
+                    </div>
+
+                    <button
+                        id="submit-proposal"
+                        type="submit"
+                        class="btn primary-btn">
+
+                        <i class="fas fa-paper-plane"></i>
+
+                        Submit Proposal
+
+                    </button>
+
+                </form>
+
+                <div
+                    id="proposal-message"
+                    class="message">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             MANAGE
+        =============================== -->
+
+        <section
+            id="manage"
+            class="section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        Manage Proposal
+                    </h2>
+
+                    <p>
+                        Update or delete proposal #1.
+                    </p>
+
+                </div>
+
+                <div class="manage-card">
+
+                    <div class="manage-icon">
+                        <i class="fas fa-gears"></i>
+                    </div>
+
+                    <h3>
+                        Proposal #1
+                    </h3>
+
+                    <p>
+                        Manage the existing initiative
+                        using PUT and DELETE requests.
+                    </p>
+
+                    <div class="manage-buttons">
+
+                        <button
+                            id="update-btn"
+                            class="btn primary-btn">
+
+                            <i class="fas fa-pen"></i>
+
+                            Update Proposal
+
+                        </button>
+
+                        <button
+                            id="delete-btn"
+                            class="btn danger-btn">
+
+                            <i class="fas fa-trash"></i>
+
+                            Delete Proposal
+
+                        </button>
+
+                    </div>
+
+                    <div
+                        id="manage-message"
+                        class="message">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <h2>
+                Synexus <span>Core</span>
+            </h2>
+
+            <p>
+                Day 32 — Architecture &
+                ES6 Code Splitting
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- IMPORTANT: ES6 MODULE -->
+
+    <script
+        type="module"
+        src="main.js">
+    </script>
+
+</body>
+
+</html>
