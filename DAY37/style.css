@@ -1,0 +1,830 @@
+/* ==========================================
+   DAY 37
+   PARALLEL NETWORK ARCHITECTURE
+========================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+:root {
+
+    --primary: #2563eb;
+
+    --primary-dark: #1d4ed8;
+
+    --bg: #f8fafc;
+
+    --card: #ffffff;
+
+    --text: #1e293b;
+
+    --muted: #64748b;
+
+    --border: #e2e8f0;
+
+    --success: #16a34a;
+
+    --error: #dc2626;
+
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, .08);
+
+}
+
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    line-height: 1.7;
+
+    transition: .3s;
+
+}
+
+
+body.dark-theme {
+
+    --bg: #0f172a;
+
+    --card: #1e293b;
+
+    --text: #f8fafc;
+
+    --muted: #cbd5e1;
+
+    --border: #334155;
+
+}
+
+
+/* CONTAINER */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+
+/* HEADER */
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: var(--card);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.navbar {
+
+    min-height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo {
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 1.7rem;
+
+    font-weight: 700;
+
+}
+
+
+.logo span {
+
+    color: var(--primary);
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+
+.nav-links a {
+
+    color: var(--text);
+
+    text-decoration: none;
+
+}
+
+
+.nav-links a:hover {
+
+    color: var(--primary);
+
+}
+
+
+#theme-toggle {
+
+    width: 45px;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+
+/* HERO */
+
+.hero {
+
+    min-height: 85vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #2563eb,
+
+            #1d4ed8
+
+        );
+
+}
+
+
+.hero-content {
+
+    padding-top: 80px;
+
+}
+
+
+.hero-icon {
+
+    font-size: 65px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero h1 {
+
+    font-size: 3.5rem;
+
+    line-height: 1.2;
+
+}
+
+
+.hero h1 span {
+
+    color: #facc15;
+
+}
+
+
+.hero p {
+
+    margin: 25px 0 35px;
+
+    font-size: 1.1rem;
+
+}
+
+
+/* BUTTON */
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 13px 25px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+}
+
+
+.primary-btn {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+
+.primary-btn:hover {
+
+    background: var(--primary-dark);
+
+}
+
+
+/* SECTION */
+
+.section {
+
+    padding: 100px 0;
+
+}
+
+
+.architecture-section {
+
+    background: var(--card);
+
+}
+
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+}
+
+
+.section-title h2 {
+
+    font-size: 2.5rem;
+
+    margin-bottom: 10px;
+
+}
+
+
+.section-title p {
+
+    color: var(--muted);
+
+}
+
+
+/* SEARCH */
+
+.search-box {
+
+    max-width: 700px;
+
+    margin: auto;
+
+}
+
+
+#github-username {
+
+    width: 100%;
+
+    padding: 17px 22px;
+
+    border: 2px solid var(--border);
+
+    border-radius: 50px;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    outline: none;
+
+}
+
+
+#github-username:focus {
+
+    border-color: var(--primary);
+
+}
+
+
+.status {
+
+    min-height: 30px;
+
+    margin: 20px auto;
+
+    text-align: center;
+
+    color: var(--muted);
+
+}
+
+
+/* EMPTY */
+
+.empty-state,
+.loading,
+.error-state {
+
+    max-width: 800px;
+
+    margin: 35px auto;
+
+    padding: 45px;
+
+    text-align: center;
+
+    background: var(--card);
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.empty-state i {
+
+    font-size: 55px;
+
+    color: var(--primary);
+
+    margin-bottom: 15px;
+
+}
+
+
+.empty-state p,
+.error-state p {
+
+    color: var(--muted);
+
+}
+
+
+/* DASHBOARD */
+
+.dashboard {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+}
+
+
+/* PROFILE */
+
+.profile-card {
+
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 35px;
+
+    background: var(--card);
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.avatar {
+
+    width: 140px;
+
+    height: 140px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid var(--primary);
+
+}
+
+
+.profile-info {
+
+    flex: 1;
+
+}
+
+
+.profile-info h3 {
+
+    font-size: 1.8rem;
+
+}
+
+
+.username {
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+}
+
+
+.bio {
+
+    color: var(--muted);
+
+    margin: 10px 0;
+
+}
+
+
+/* DASHBOARD CARDS */
+
+.data-card {
+
+    padding: 30px;
+
+    background: var(--card);
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.data-card h3 {
+
+    margin-bottom: 20px;
+
+}
+
+
+.data-list {
+
+    list-style: none;
+
+}
+
+
+.data-list li {
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.data-list li:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.repo-link {
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+}
+
+
+.repo-link:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* ARCHITECTURE */
+
+.architecture-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.architecture-card {
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: var(--bg);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+}
+
+
+.architecture-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-size: 25px;
+
+}
+
+
+.architecture-card p {
+
+    color: var(--muted);
+
+}
+
+
+/* FLOW */
+
+.flow {
+
+    margin-top: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+.flow-box {
+
+    padding: 15px 20px;
+
+    background: var(--bg);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.flow-box.result {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+
+/* LOADER */
+
+.loader {
+
+    width: 40px;
+
+    height: 40px;
+
+    margin: 0 auto 15px;
+
+    border: 4px solid var(--border);
+
+    border-top-color: var(--primary);
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+
+/* FOOTER */
+
+.footer {
+
+    padding: 50px 0 20px;
+
+    text-align: center;
+
+    background: var(--card);
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.footer span {
+
+    color: var(--primary);
+
+}
+
+
+.footer p {
+
+    color: var(--muted);
+
+}
+
+
+.footer hr {
+
+    margin: 30px 0 20px;
+
+    border: none;
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+
+    .dashboard {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .profile-card {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    .architecture-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .section {
+
+        padding: 80px 0;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .flow {
+
+        flex-direction: column;
+
+    }
+
+}

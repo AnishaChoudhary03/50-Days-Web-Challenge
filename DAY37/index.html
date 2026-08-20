@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Synexus Core | Parallel API
+    </title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <nav class="navbar">
+
+                <a
+                    href="#home"
+                    class="logo">
+
+                    Synexus
+                    <span>Core</span>
+
+                </a>
+
+
+                <div class="nav-links">
+
+                    <a href="#home">
+                        Home
+                    </a>
+
+                    <a href="#dashboard">
+                        Dashboard
+                    </a>
+
+                    <a href="#architecture">
+                        Architecture
+                    </a>
+
+                </div>
+
+
+                <button
+                    id="theme-toggle"
+                    type="button">
+
+                    🌙
+
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section
+            id="home"
+            class="hero">
+
+            <div class="container hero-content">
+
+                <div class="hero-icon">
+
+                    <i class="fas fa-bolt"></i>
+
+                </div>
+
+
+                <h1>
+
+                    Parallel
+                    <span>API</span>
+                    Architecture
+
+                </h1>
+
+
+                <p>
+
+                    Fetch multiple pieces of
+                    dashboard data simultaneously
+                    using Promise.all().
+
+                </p>
+
+
+                <a
+                    href="#dashboard"
+                    class="btn primary-btn">
+
+                    Open Dashboard
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- DASHBOARD -->
+
+        <section
+            id="dashboard"
+            class="section">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Developer Dashboard
+
+                    </h2>
+
+
+                    <p>
+
+                        Enter a GitHub username to
+                        fetch profile, repositories
+                        and followers in parallel.
+
+                    </p>
+
+                </div>
+
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="github-username"
+                        placeholder="Enter GitHub username"
+                        autocomplete="off">
+
+                </div>
+
+
+                <div
+                    id="dashboard-status"
+                    class="status">
+
+                </div>
+
+
+                <div
+                    id="dashboard-content">
+
+                    <div class="empty-state">
+
+                        <i class="fab fa-github"></i>
+
+                        <h3>
+
+                            Dashboard Ready
+
+                        </h3>
+
+                        <p>
+
+                            Search for a developer
+                            to load the dashboard.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ARCHITECTURE -->
+
+        <section
+            id="architecture"
+            class="section architecture-section">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Parallel Execution
+
+                    </h2>
+
+
+                    <p>
+
+                        Three independent requests
+                        are started at the same time.
+
+                    </p>
+
+                </div>
+
+
+                <div class="architecture-grid">
+
+
+                    <div class="architecture-card">
+
+                        <div class="architecture-icon">
+
+                            <i class="fas fa-user"></i>
+
+                        </div>
+
+                        <h3>
+                            Profile
+                        </h3>
+
+                        <p>
+                            User profile information
+                        </p>
+
+                    </div>
+
+
+                    <div class="architecture-card">
+
+                        <div class="architecture-icon">
+
+                            <i class="fas fa-code"></i>
+
+                        </div>
+
+                        <h3>
+                            Repositories
+                        </h3>
+
+                        <p>
+                            Public repositories
+                        </p>
+
+                    </div>
+
+
+                    <div class="architecture-card">
+
+                        <div class="architecture-icon">
+
+                            <i class="fas fa-users"></i>
+
+                        </div>
+
+                        <h3>
+                            Followers
+                        </h3>
+
+                        <p>
+                            Developer followers
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="flow">
+
+                    <div class="flow-box">
+                        Profile API
+                    </div>
+
+                    <span>+</span>
+
+                    <div class="flow-box">
+                        Repositories API
+                    </div>
+
+                    <span>+</span>
+
+                    <div class="flow-box">
+                        Followers API
+                    </div>
+
+                    <span>→</span>
+
+                    <div class="flow-box result">
+                        Dashboard
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <h2>
+
+                Synexus
+                <span>Core</span>
+
+            </h2>
+
+
+            <p>
+
+                Day 37 — Parallel Network
+                Architecture
+
+            </p>
+
+
+            <hr>
+
+
+            <p>
+                © 2026 Synexus Core.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- MODULE -->
+
+    <script
+        type="module"
+        src="main.js">
+    </script>
+
+</body>
+
+</html>
