@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Synexus Core | WebSockets
+    </title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <nav class="navbar">
+
+                <a
+                    href="#home"
+                    class="logo">
+
+                    Synexus
+                    <span>Core</span>
+
+                </a>
+
+
+                <div class="nav-links">
+
+                    <a href="#home">
+                        Home
+                    </a>
+
+                    <a href="#terminal">
+                        Live Terminal
+                    </a>
+
+                    <a href="#about">
+                        WebSockets
+                    </a>
+
+                </div>
+
+
+                <button
+                    id="theme-toggle"
+                    type="button">
+
+                    🌙
+
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==============================
+             HERO
+        =============================== -->
+
+        <section
+            id="home"
+            class="hero">
+
+            <div class="container hero-content">
+
+                <div class="hero-icon">
+
+                    <i class="fas fa-bolt"></i>
+
+                </div>
+
+
+                <h1>
+
+                    Real-Time
+                    <span>WebSockets</span>
+
+                </h1>
+
+
+                <p>
+
+                    Send and receive data instantly
+                    through a persistent,
+                    bidirectional connection.
+
+                </p>
+
+
+                <a
+                    href="#terminal"
+                    class="btn primary-btn">
+
+                    Open Live Terminal
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             LIVE TERMINAL
+        =============================== -->
+
+        <section
+            id="terminal"
+            class="section terminal-section">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Live WebSocket Terminal
+
+                    </h2>
+
+
+                    <p>
+
+                        Messages are sent through
+                        a persistent WebSocket
+                        connection.
+
+                    </p>
+
+                </div>
+
+
+                <div class="terminal-card">
+
+
+                    <!-- STATUS -->
+
+                    <div class="connection-status">
+
+                        <span
+                            id="connection-dot"
+                            class="status-dot">
+                        </span>
+
+
+                        <span
+                            id="connection-status">
+
+                            Connecting...
+
+                        </span>
+
+                    </div>
+
+
+                    <!-- LIVE FEED -->
+
+                    <div
+                        id="live-feed"
+                        class="live-feed">
+
+                        <div class="system-message">
+
+                            Connecting to WebSocket
+                            server...
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- INPUT -->
+
+                    <div class="terminal-input">
+
+                        <input
+                            type="text"
+                            id="ws-input"
+                            placeholder="Type a message..."
+                            autocomplete="off">
+
+
+                        <button
+                            id="ws-send"
+                            class="btn send-btn"
+                            type="button">
+
+                            <i class="fas fa-paper-plane"></i>
+
+                            Send
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             ABOUT
+        =============================== -->
+
+        <section
+            id="about"
+            class="section about-section">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <h2>
+
+                        How WebSockets Work
+
+                    </h2>
+
+
+                    <p>
+
+                        Unlike traditional HTTP,
+                        WebSockets maintain a
+                        persistent connection.
+
+                    </p>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="fas fa-plug"></i>
+
+                        </div>
+
+
+                        <h3>
+
+                            Persistent Connection
+
+                        </h3>
+
+
+                        <p>
+
+                            The connection stays open
+                            instead of closing after
+                            every request.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="fas fa-arrow-right-arrow-left"></i>
+
+                        </div>
+
+
+                        <h3>
+
+                            Bidirectional
+
+                        </h3>
+
+
+                        <p>
+
+                            Both the browser and server
+                            can send messages.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="fas fa-bolt"></i>
+
+                        </div>
+
+
+                        <h3>
+
+                            Real-Time
+
+                        </h3>
+
+
+                        <p>
+
+                            Messages can arrive instantly
+                            without polling.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <h2>
+
+                Synexus
+                <span>Core</span>
+
+            </h2>
+
+
+            <p>
+
+                Day 38 — Real-Time
+                Bidirectional Data
+
+            </p>
+
+
+            <hr>
+
+
+            <p>
+
+                © 2026 Synexus Core.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ES6 MODULE -->
+
+    <script
+        type="module"
+        src="main.js">
+    </script>
+
+</body>
+
+</html>
