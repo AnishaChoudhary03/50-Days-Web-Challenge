@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Day 40 - IndexedDB Offline Storage</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>Synexus Core</h2>
+        <span>Day 40 - IndexedDB</span>
+    </nav>
+
+    <main>
+
+        <section class="hero">
+
+            <h1>Offline Proposal Manager</h1>
+
+            <p>
+                Submit your proposal. If you are offline,
+                your data will be safely stored using IndexedDB.
+            </p>
+
+        </section>
+
+
+        <section class="proposal-section">
+
+            <h2>Propose an Initiative</h2>
+
+            <form id="proposal-form">
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Enter proposal title"
+                    required
+                >
+
+                <textarea
+                    id="description"
+                    placeholder="Describe your initiative"
+                    required
+                ></textarea>
+
+                <button type="submit" id="submit-btn">
+                    Submit Proposal
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+        </section>
+
+
+        <section class="offline-section">
+
+            <h2>Offline Saved Proposals</h2>
+
+            <button id="show-offline-btn">
+                Show Saved Offline Data
+            </button>
+
+            <div id="offline-data"></div>
+
+        </section>
+
+    </main>
+
+
+    <script type="module" src="main.js"></script>
+
+</body>
+</html>
