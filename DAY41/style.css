@@ -1,0 +1,355 @@
+/* ==========================================
+   DAY 41
+   WEB WORKERS
+========================================== */
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: #0f172a;
+
+    color: #f8fafc;
+
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header {
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    background: #1e293b;
+
+}
+
+
+.header h1 {
+
+    font-size: 2rem;
+
+}
+
+
+.header h1 span {
+
+    color: #8b5cf6;
+
+}
+
+
+.header p {
+
+    margin-top: 5px;
+
+    color: #94a3b8;
+
+}
+
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+
+    min-height: 75vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.hero h2 {
+
+    font-size: 2.5rem;
+
+    margin-bottom: 15px;
+
+}
+
+
+.hero > .container > p {
+
+    color: #94a3b8;
+
+    margin-bottom: 40px;
+
+}
+
+
+/* ==========================================
+   ANIMATION AREA
+========================================== */
+
+.animation-area {
+
+    width: 100%;
+
+    height: 180px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* ==========================================
+   BOUNCING BALL
+========================================== */
+
+.ball {
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 50%;
+
+    background: #8b5cf6;
+
+    box-shadow:
+        0 0 30px
+        rgba(139, 92, 246, 0.7);
+
+    animation:
+
+        bounce 1s
+        ease-in-out
+        infinite alternate;
+
+}
+
+
+@keyframes bounce {
+
+    from {
+
+        transform:
+            translateY(-50px);
+
+    }
+
+    to {
+
+        transform:
+            translateY(50px);
+
+    }
+
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.controls {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.btn {
+
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.btn:hover {
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.primary {
+
+    background: #2563eb;
+
+}
+
+
+.primary:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+.danger {
+
+    background: #dc2626;
+
+}
+
+
+.danger:hover {
+
+    background: #b91c1c;
+
+}
+
+
+.btn:disabled {
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.status {
+
+    margin: 30px auto 15px;
+
+    padding: 15px;
+
+    max-width: 600px;
+
+    background: #1e293b;
+
+    border-radius: 10px;
+
+    color: #cbd5e1;
+
+}
+
+
+/* ==========================================
+   RESULT
+========================================== */
+
+.result {
+
+    min-height: 50px;
+
+    margin: 15px auto;
+
+    padding: 15px;
+
+    max-width: 600px;
+
+    border-radius: 10px;
+
+    color: #86efac;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #020617;
+
+    color: #64748b;
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .hero h2 {
+
+        font-size: 1.8rem;
+
+    }
+
+
+    .ball {
+
+        width: 55px;
+
+        height: 55px;
+
+    }
+
+}

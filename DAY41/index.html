@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Synexus Core | Web Workers
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+    <header class="header">
+
+        <div class="container">
+
+            <h1>
+                Synexus <span>Core</span>
+            </h1>
+
+            <p>
+                Day 41 — Web Workers
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container">
+
+                <h2>
+                    Multithreading &
+                    Background Processing
+                </h2>
+
+                <p>
+                    Run heavy calculations without
+                    freezing the user interface.
+                </p>
+
+
+                <!-- Animated Ball -->
+
+                <div class="animation-area">
+
+                    <div class="ball"></div>
+
+                </div>
+
+
+                <!-- Controls -->
+
+                <div class="controls">
+
+                    <button
+                        id="process-btn"
+                        class="btn primary">
+
+                        Run Heavy Process
+
+                    </button>
+
+
+                    <button
+                        id="cancel-btn"
+                        class="btn danger">
+
+                        Cancel Process
+
+                    </button>
+
+                </div>
+
+
+                <!-- Status -->
+
+                <div
+                    id="status"
+                    class="status">
+
+                    Ready to process.
+
+                </div>
+
+
+                <!-- Result -->
+
+                <div
+                    id="result"
+                    class="result">
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Web Workers keep heavy computation
+            away from the main thread.
+        </p>
+
+    </footer>
+
+
+    <script
+        type="module"
+        src="main.js">
+    </script>
+
+</body>
+
+</html>
