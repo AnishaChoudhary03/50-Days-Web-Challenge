@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Synexus Core | Global State
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+    <header class="header">
+
+        <div class="container">
+
+            <h1>
+                Synexus <span>Core</span>
+            </h1>
+
+            <p>
+                Day 43 — Global State Management
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container">
+
+                <h2>
+                    Global State Management
+                </h2>
+
+                <p>
+                    A centralized Pub/Sub store
+                    keeps independent components
+                    synchronized.
+                </p>
+
+
+                <!-- GLOBAL STATE -->
+
+                <div class="state-panel">
+
+                    <h3>
+                        Global Store
+                    </h3>
+
+
+                    <div class="state-values">
+
+                        <div class="state-box">
+
+                            <span>
+                                Cart Count
+                            </span>
+
+                            <strong id="cart-count">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="state-box">
+
+                            <span>
+                                Theme
+                            </span>
+
+                            <strong id="theme-value">
+                                light
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONTROLS -->
+
+                    <div class="controls">
+
+                        <button
+                            id="add-cart"
+                            class="btn primary">
+
+                            Add to Cart
+
+                        </button>
+
+
+                        <button
+                            id="remove-cart"
+                            class="btn danger">
+
+                            Remove Item
+
+                        </button>
+
+
+                        <button
+                            id="toggle-theme"
+                            class="btn secondary">
+
+                            Toggle Theme
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COMPONENTS -->
+
+                <h3 class="component-title">
+
+                    Subscribed Components
+
+                </h3>
+
+
+                <div class="cards-container">
+
+                    <user-card
+                        name="Jane Doe"
+                        role="Lead Engineer">
+                    </user-card>
+
+
+                    <user-card
+                        name="John Smith"
+                        role="Frontend Developer">
+                    </user-card>
+
+
+                    <user-card
+                        name="Sarah Wilson"
+                        role="UI/UX Designer">
+                    </user-card>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Synexus Core © 2026
+        </p>
+
+    </footer>
+
+
+    <script
+        type="module"
+        src="main.js">
+    </script>
+
+</body>
+
+</html>
