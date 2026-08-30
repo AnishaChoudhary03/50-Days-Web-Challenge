@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Synexus Core | Reactive Components
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================
+         HEADER
+    =================================== -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <div>
+
+                <h1>
+                    Synexus <span>Core</span>
+                </h1>
+
+                <p>
+                    Day 44 — Reactive Web Components
+                </p>
+
+            </div>
+
+
+            <!-- CART COUNTER -->
+
+            <cart-counter></cart-counter>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================================
+         MAIN
+    =================================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container">
+
+                <h2>
+                    Reactive Web Components
+                </h2>
+
+
+                <p>
+
+                    Independent components communicate
+                    through a centralized global store.
+
+                </p>
+
+
+                <!-- ==================================
+                     PRODUCT AREA
+                =================================== -->
+
+                <div class="product-grid">
+
+
+                    <div class="product-card">
+
+                        <div class="product-icon">
+                            💻
+                        </div>
+
+
+                        <h3>
+                            Developer Laptop
+                        </h3>
+
+
+                        <p>
+                            High-performance laptop
+                            for developers.
+                        </p>
+
+
+                        <product-button
+                            product="Laptop">
+                        </product-button>
+
+                    </div>
+
+
+                    <div class="product-card">
+
+                        <div class="product-icon">
+                            ⌨️
+                        </div>
+
+
+                        <h3>
+                            Mechanical Keyboard
+                        </h3>
+
+
+                        <p>
+                            Premium keyboard for
+                            productive coding.
+                        </p>
+
+
+                        <product-button
+                            product="Keyboard">
+                        </product-button>
+
+                    </div>
+
+
+                    <div class="product-card">
+
+                        <div class="product-icon">
+                            🖱️
+                        </div>
+
+
+                        <h3>
+                            Wireless Mouse
+                        </h3>
+
+
+                        <p>
+                            Comfortable mouse for
+                            everyday development.
+                        </p>
+
+
+                        <product-button
+                            product="Mouse">
+                        </product-button>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- ==================================
+                     EXPLANATION
+                =================================== -->
+
+                <div class="architecture">
+
+                    <h2>
+                        How It Works
+                    </h2>
+
+
+                    <div class="flow">
+
+                        <div class="flow-box">
+
+                            <strong>
+                                Product Button
+                            </strong>
+
+                            <span>
+                                Publisher
+                            </span>
+
+                        </div>
+
+
+                        <div class="arrow">
+                            →
+                        </div>
+
+
+                        <div class="flow-box store-box">
+
+                            <strong>
+                                Global Store
+                            </strong>
+
+                            <span>
+                                Source of Truth
+                            </span>
+
+                        </div>
+
+
+                        <div class="arrow">
+                            →
+                        </div>
+
+
+                        <div class="flow-box">
+
+                            <strong>
+                                Cart Counter
+                            </strong>
+
+                            <span>
+                                Subscriber
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================
+         FOOTER
+    =================================== -->
+
+    <footer>
+
+        <p>
+            Synexus Core © 2026
+        </p>
+
+    </footer>
+
+
+    <!-- ==================================
+         MAIN JS
+    =================================== -->
+
+    <script
+        type="module"
+        src="main.js">
+    </script>
+
+</body>
+
+</html>
