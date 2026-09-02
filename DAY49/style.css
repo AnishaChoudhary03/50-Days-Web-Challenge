@@ -1,0 +1,1108 @@
+/* ==========================================
+   SYNEXUS CORE
+   DAY 49 - DATA STREAMS & ROUTING
+========================================== */
+
+
+/* ==========================================
+   VARIABLES
+========================================== */
+
+:root {
+
+    --bg-primary: #f5f5f7;
+
+    --bg-secondary: #ffffff;
+
+    --bg-card: #ffffff;
+
+    --text-primary: #18181b;
+
+    --text-secondary: #71717a;
+
+    --text-muted: #a1a1aa;
+
+    --border-color: #e4e4e7;
+
+    --accent: #7c3aed;
+
+    --accent-light: #ede9fe;
+
+    --danger: #dc2626;
+
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06);
+
+    --radius: 16px;
+
+    --transition: 0.25s ease;
+}
+
+
+/* ==========================================
+   DARK THEME
+========================================== */
+
+body.dark-theme {
+
+    --bg-primary: #09090b;
+
+    --bg-secondary: #18181b;
+
+    --bg-card: #18181b;
+
+    --text-primary: #fafafa;
+
+    --text-secondary: #a1a1aa;
+
+    --text-muted: #71717a;
+
+    --border-color: #27272a;
+
+    --accent: #a78bfa;
+
+    --accent-light: #2e1065;
+
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background:
+        var(--bg-primary);
+
+    color:
+        var(--text-primary);
+
+    line-height: 1.6;
+
+    transition:
+        background var(--transition),
+        color var(--transition);
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+button {
+
+    font: inherit;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.app-header {
+
+    min-height: 72px;
+
+    padding:
+        0 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    background:
+        var(--bg-secondary);
+
+    border-bottom:
+        1px solid
+        var(--border-color);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+/* ==========================================
+   BRAND
+========================================== */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+
+.brand-logo {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 12px;
+
+    background:
+        var(--accent);
+
+    color: white;
+
+    font-weight: 800;
+}
+
+
+.brand h1 {
+
+    font-size: 1rem;
+
+    line-height: 1.2;
+}
+
+
+.brand-info span {
+
+    display: block;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 0.72rem;
+}
+
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.main-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.nav-link {
+
+    padding:
+        8px 13px;
+
+    border-radius: 8px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 0.88rem;
+
+    transition:
+        background var(--transition),
+        color var(--transition);
+}
+
+
+.nav-link:hover {
+
+    color:
+        var(--text-primary);
+
+    background:
+        var(--bg-primary);
+}
+
+
+.nav-link.active {
+
+    color:
+        var(--accent);
+
+    background:
+        var(--accent-light);
+
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   THEME BUTTON
+========================================== */
+
+.theme-button {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 10px;
+
+    background:
+        var(--bg-primary);
+
+    cursor: pointer;
+
+    font-size: 1rem;
+}
+
+
+/* ==========================================
+   APP ROOT
+========================================== */
+
+#app-root {
+
+    width:
+        min(1200px, 90%);
+
+    margin:
+        0 auto;
+
+    padding:
+        55px 0;
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+
+    min-height: 420px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 60px;
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--bg-secondary),
+            var(--accent-light)
+        );
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.hero-content {
+
+    max-width: 700px;
+}
+
+
+.hero-badge {
+
+    display: inline-block;
+
+    padding:
+        6px 12px;
+
+    margin-bottom: 18px;
+
+    border-radius: 50px;
+
+    background:
+        var(--accent-light);
+
+    color:
+        var(--accent);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.hero h2 {
+
+    font-size:
+        clamp(2.5rem, 6vw, 4.5rem);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 22px;
+}
+
+
+.hero h2 span {
+
+    color:
+        var(--accent);
+}
+
+
+.hero p {
+
+    max-width: 650px;
+
+    margin-bottom: 28px;
+
+    color:
+        var(--text-secondary);
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.hero-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+.primary-button,
+.secondary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        11px 18px;
+
+    border-radius: 10px;
+
+    font-size: 0.88rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.primary-button {
+
+    background:
+        var(--accent);
+
+    color: white;
+}
+
+
+.secondary-button {
+
+    background:
+        var(--bg-secondary);
+
+    border:
+        1px solid
+        var(--border-color);
+}
+
+
+/* ==========================================
+   SECTIONS
+========================================== */
+
+.dashboard-section,
+.page-section {
+
+    margin-top: 60px;
+}
+
+
+.section-heading {
+
+    margin-bottom: 25px;
+}
+
+
+.section-label {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        var(--accent);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.section-heading h2,
+.page-section > h2 {
+
+    font-size: 1.8rem;
+
+    letter-spacing: -1px;
+}
+
+
+/* ==========================================
+   ARCHITECTURE CARDS
+========================================== */
+
+.architecture-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.info-card {
+
+    padding: 25px;
+
+    background:
+        var(--bg-card);
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.info-icon {
+
+    margin-bottom: 15px;
+
+    font-size: 1.6rem;
+}
+
+
+.info-card h3 {
+
+    margin-bottom: 8px;
+}
+
+
+.info-card p {
+
+    color:
+        var(--text-secondary);
+
+    font-size: 0.85rem;
+}
+
+
+/* ==========================================
+   USER PROFILE
+========================================== */
+
+.user-profile {
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background:
+        var(--bg-card);
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.user-profile img {
+
+    width: 100px;
+
+    height: 100px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+.user-profile h3 {
+
+    font-size: 1.4rem;
+}
+
+
+.user-profile p {
+
+    margin-top: 4px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 0.85rem;
+}
+
+
+/* ==========================================
+   STATS
+========================================== */
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+
+.stat-card {
+
+    padding: 20px;
+
+    background:
+        var(--bg-card);
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius:
+        var(--radius);
+
+    text-align: center;
+}
+
+
+.stat-card strong {
+
+    display: block;
+
+    color:
+        var(--accent);
+
+    font-size: 1.7rem;
+}
+
+
+.stat-card span {
+
+    color:
+        var(--text-secondary);
+
+    font-size: 0.8rem;
+}
+
+
+/* ==========================================
+   DATA SECTION
+========================================== */
+
+.page-description {
+
+    margin-top: 8px;
+
+    color:
+        var(--text-secondary);
+}
+
+
+.sub-heading {
+
+    margin:
+        35px 0 18px;
+}
+
+
+/* ==========================================
+   REPOSITORIES
+========================================== */
+
+.repository-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.repository-card {
+
+    padding: 20px;
+
+    background:
+        var(--bg-card);
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius:
+        var(--radius);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition);
+}
+
+
+.repository-card:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        var(--accent);
+}
+
+
+.repository-card h3 {
+
+    margin-bottom: 8px;
+
+    font-size: 1rem;
+}
+
+
+.repository-card p {
+
+    min-height: 50px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 0.8rem;
+}
+
+
+.repo-meta {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 0.72rem;
+}
+
+
+/* ==========================================
+   FOLLOWERS
+========================================== */
+
+.followers-grid {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+.follower-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        8px 12px;
+
+    background:
+        var(--bg-card);
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 50px;
+}
+
+
+.follower-card img {
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+.follower-card span {
+
+    font-size: 0.78rem;
+}
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.loading-screen {
+
+    min-height: 450px;
+
+    display: grid;
+
+    place-items: center;
+
+    align-content: center;
+
+    gap: 10px;
+
+    text-align: center;
+
+    color:
+        var(--text-secondary);
+}
+
+
+.spinner {
+
+    width: 42px;
+
+    height: 42px;
+
+    border:
+        4px solid
+        var(--border-color);
+
+    border-top-color:
+        var(--accent);
+
+    border-radius: 50%;
+
+    animation:
+        spin 0.8s linear infinite;
+}
+
+
+@keyframes spin {
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.error-page {
+
+    min-height: 450px;
+
+    display: grid;
+
+    place-items: center;
+
+    align-content: center;
+
+    gap: 12px;
+
+    text-align: center;
+}
+
+
+.error-icon {
+
+    font-size: 3rem;
+}
+
+
+.error-page p {
+
+    max-width: 600px;
+
+    color:
+        var(--text-secondary);
+}
+
+
+/* ==========================================
+   TECHNOLOGIES
+========================================== */
+
+.technology-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+
+.technology-list span {
+
+    padding:
+        8px 13px;
+
+    border-radius: 50px;
+
+    background:
+        var(--accent-light);
+
+    color:
+        var(--accent);
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.app-footer {
+
+    padding:
+        30px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top:
+        1px solid
+        var(--border-color);
+
+    color:
+        var(--text-secondary);
+
+    font-size: 0.78rem;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .app-header {
+
+        flex-wrap: wrap;
+
+        padding:
+            14px 5%;
+    }
+
+
+    .main-nav {
+
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        overflow-x: auto;
+    }
+
+
+    .architecture-grid,
+    .repository-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    #app-root {
+
+        width: 92%;
+
+        padding:
+            35px 0;
+    }
+
+
+    .brand-info span {
+
+        display: none;
+    }
+
+
+    .main-nav {
+
+        justify-content: flex-start;
+    }
+
+
+    .nav-link {
+
+        white-space: nowrap;
+
+        padding:
+            7px 10px;
+
+        font-size: 0.78rem;
+    }
+
+
+    .hero {
+
+        min-height: 400px;
+
+        padding: 30px;
+    }
+
+
+    .hero h2 {
+
+        font-size: 2.7rem;
+
+        letter-spacing: -2px;
+    }
+
+
+    .architecture-grid,
+    .repository-grid,
+    .stats-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .user-profile {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .app-footer {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
