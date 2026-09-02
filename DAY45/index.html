@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Synexus Core | Templates & Slots
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         NATIVE HTML TEMPLATE
+    ====================================== -->
+
+    <template id="modal-template">
+
+        <style>
+
+            :host {
+
+                display: block;
+
+            }
+
+
+            .modal-overlay {
+
+                position: fixed;
+
+                inset: 0;
+
+                display: none;
+
+                align-items: center;
+
+                justify-content: center;
+
+                padding: 20px;
+
+                background:
+                    rgba(0, 0, 0, 0.7);
+
+                z-index: 1000;
+
+            }
+
+
+            :host([open])
+            .modal-overlay {
+
+                display: flex;
+
+            }
+
+
+            .modal-box {
+
+                width: 100%;
+
+                max-width: 500px;
+
+                padding: 30px;
+
+                background: #ffffff;
+
+                color: #1e293b;
+
+                border-radius: 18px;
+
+                box-shadow:
+                    0 20px 60px
+                    rgba(0, 0, 0, 0.3);
+
+                animation:
+                    modalIn 0.25s ease;
+
+            }
+
+
+            @keyframes modalIn {
+
+                from {
+
+                    opacity: 0;
+
+                    transform:
+                        translateY(-20px)
+                        scale(0.95);
+
+                }
+
+                to {
+
+                    opacity: 1;
+
+                    transform:
+                        translateY(0)
+                        scale(1);
+
+                }
+
+            }
+
+
+            .modal-header {
+
+                display: flex;
+
+                align-items: center;
+
+                justify-content: space-between;
+
+                gap: 15px;
+
+                margin-bottom: 20px;
+
+            }
+
+
+            .close-btn {
+
+                width: 35px;
+
+                height: 35px;
+
+                border: none;
+
+                border-radius: 50%;
+
+                background: #e2e8f0;
+
+                color: #1e293b;
+
+                font-size: 20px;
+
+                cursor: pointer;
+
+            }
+
+
+            .close-btn:hover {
+
+                background: #cbd5e1;
+
+            }
+
+
+            .modal-body {
+
+                color: #64748b;
+
+                line-height: 1.7;
+
+            }
+
+        </style>
+
+
+        <div class="modal-overlay">
+
+            <div
+                class="modal-box"
+                role="dialog"
+                aria-modal="true">
+
+                <div class="modal-header">
+
+                    <div>
+
+                        <slot name="title">
+                            Default Title
+                        </slot>
+
+                    </div>
+
+
+                    <button
+                        class="close-btn"
+                        type="button"
+                        aria-label="Close modal">
+
+                        ×
+
+                    </button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    <slot>
+                        Default Body
+                    </slot>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </template>
+
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <h1>
+                Synexus <span>Core</span>
+            </h1>
+
+            <p>
+                Day 45 — Templates & Slots
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================
+         MAIN
+    ====================================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container">
+
+                <h2>
+                    Advanced Component Composition
+                </h2>
+
+                <p>
+                    Reusable modal components built
+                    using HTML templates and slots.
+                </p>
+
+
+                <div class="buttons">
+
+                    <button
+                        id="warning-btn"
+                        class="btn danger">
+
+                        Open Warning Modal
+
+                    </button>
+
+
+                    <button
+                        id="success-btn"
+                        class="btn success">
+
+                        Open Success Modal
+
+                    </button>
+
+                </div>
+
+
+                <!-- =================================
+                     FIRST MODAL
+                ================================== -->
+
+                <custom-modal id="warning-modal">
+
+                    <h2 slot="title">
+                        Warning
+                    </h2>
+
+
+                    <p>
+                        Are you sure you want to
+                        delete this?
+                    </p>
+
+                </custom-modal>
+
+
+                <!-- =================================
+                     SECOND MODAL
+                ================================== -->
+
+                <custom-modal id="success-modal">
+
+                    <h2 slot="title">
+                        Success!
+                    </h2>
+
+
+                    <p>
+                        Your initiative has been
+                        successfully created.
+                    </p>
+
+                </custom-modal>
+
+
+                <!-- =================================
+                     EXPLANATION
+                ================================== -->
+
+                <div class="info">
+
+                    <h3>
+                        How Slots Work
+                    </h3>
+
+
+                    <div class="code-example">
+
+                        <code>
+                            &lt;custom-modal&gt;
+                            <br>
+                            &nbsp;&nbsp;&lt;h2 slot="title"&gt;
+                            Warning
+                            &lt;/h2&gt;
+                            <br>
+                            &nbsp;&nbsp;&lt;p&gt;
+                            Are you sure?
+                            &lt;/p&gt;
+                            <br>
+                            &lt;/custom-modal&gt;
+                        </code>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+        <p>
+            Synexus Core © 2026
+        </p>
+
+    </footer>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script
+        type="module"
+        src="main.js">
+    </script>
+
+</body>
+
+</html>

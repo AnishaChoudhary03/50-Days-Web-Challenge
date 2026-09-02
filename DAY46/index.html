@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Synexus Core - Advanced Web Engineering Capstone"
+    >
+
+    <title>Synexus Core | Dashboard</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         APPLICATION HEADER
+    ========================== -->
+    <header class="app-header">
+
+        <div class="brand">
+            <div class="brand-logo">SC</div>
+
+            <div>
+                <h1>Synexus Core</h1>
+                <span>Web Engineering Hub</span>
+            </div>
+        </div>
+
+
+        <!-- Navigation -->
+        <nav class="main-nav" aria-label="Main Navigation">
+
+            <a href="#/" class="nav-link active">
+                Dashboard
+            </a>
+
+            <a href="#/users" class="nav-link">
+                Users
+            </a>
+
+            <a href="#/data" class="nav-link">
+                Data
+            </a>
+
+            <a href="#/about" class="nav-link">
+                About
+            </a>
+
+        </nav>
+
+
+        <!-- Theme Button -->
+        <button
+            id="theme-toggle"
+            class="theme-button"
+            type="button"
+            aria-label="Toggle theme"
+        >
+            🌙
+        </button>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN SPA APPLICATION
+    ========================== -->
+    <main id="app-root">
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-badge">
+                    DAY 46 • CAPSTONE
+                </span>
+
+                <h2>
+                    Build. Connect.
+                    <span>Engineer.</span>
+                </h2>
+
+                <p>
+                    A vanilla JavaScript single-page application
+                    built using modern web engineering principles.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="#/users" class="primary-button">
+                        Explore Users
+                    </a>
+
+                    <a href="#/data" class="secondary-button">
+                        View Data
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DASHBOARD GRID
+        ========================== -->
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">
+                        OVERVIEW
+                    </span>
+
+                    <h2>
+                        System Dashboard
+                    </h2>
+                </div>
+
+                <span class="status">
+                    <span class="status-dot"></span>
+                    System Online
+                </span>
+
+            </div>
+
+
+            <div class="dashboard-grid">
+
+                <!-- Card 1 -->
+                <article class="dashboard-card">
+
+                    <div class="card-icon">
+                        👥
+                    </div>
+
+                    <div class="card-content">
+
+                        <span class="card-label">
+                            USERS
+                        </span>
+
+                        <h3 id="user-count">
+                            128
+                        </h3>
+
+                        <p>
+                            Active users in the system
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Card 2 -->
+                <article class="dashboard-card">
+
+                    <div class="card-icon">
+                        📊
+                    </div>
+
+                    <div class="card-content">
+
+                        <span class="card-label">
+                            DATA STREAMS
+                        </span>
+
+                        <h3 id="data-count">
+                            24
+                        </h3>
+
+                        <p>
+                            Available data sources
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Card 3 -->
+                <article class="dashboard-card">
+
+                    <div class="card-icon">
+                        ⚡
+                    </div>
+
+                    <div class="card-content">
+
+                        <span class="card-label">
+                            PERFORMANCE
+                        </span>
+
+                        <h3>
+                            98.6%
+                        </h3>
+
+                        <p>
+                            System performance score
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Card 4 -->
+                <article class="dashboard-card">
+
+                    <div class="card-icon">
+                        💾
+                    </div>
+
+                    <div class="card-content">
+
+                        <span class="card-label">
+                            STORAGE
+                        </span>
+
+                        <h3>
+                            64%
+                        </h3>
+
+                        <p>
+                            Local storage utilization
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ACTIVITY SECTION
+        ========================== -->
+        <section class="activity-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">
+                        ACTIVITY
+                    </span>
+
+                    <h2>
+                        Recent System Activity
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="activity-list">
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>
+                            Application initialized
+                        </strong>
+
+                        <p>
+                            Synexus Core dashboard loaded successfully.
+                        </p>
+                    </div>
+
+                    <time>
+                        Just now
+                    </time>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        ↑
+                    </div>
+
+                    <div>
+                        <strong>
+                            Data synchronization
+                        </strong>
+
+                        <p>
+                            Latest system data synchronized.
+                        </p>
+                    </div>
+
+                    <time>
+                        5 min ago
+                    </time>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        ●
+                    </div>
+
+                    <div>
+                        <strong>
+                            System status
+                        </strong>
+
+                        <p>
+                            All core services are operational.
+                        </p>
+                    </div>
+
+                    <time>
+                        12 min ago
+                    </time>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="app-footer">
+
+        <p>
+            © 2026 Synexus Core
+        </p>
+
+        <p>
+            Built with HTML • CSS • JavaScript
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="./main.js"></script>
+
+</body>
+</html>
